@@ -11,8 +11,15 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var detailImageView: UIImageView!
     
+    //MARK: Public properties
+    var curentIndexPath = IndexPath()
+    var image: Image?
+    
+    //MARK: Life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        detailImageView.downloadImage(from: image?.imageResults[curentIndexPath.item].original ?? "")
         
     }
     

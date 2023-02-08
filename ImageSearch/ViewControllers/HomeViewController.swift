@@ -26,6 +26,16 @@ class HomeViewController: UIViewController {
         setupCollectionViewCell()
     }
     
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController else { return }
+        guard let indexPaths = imageCollectionView.indexPathsForSelectedItems else { return }
+        guard let indexPath = indexPaths.first else { return }
+        detailVC.image = image
+        detailVC.curentIndexPath = indexPath
+    }
+    
+    
     //MARK: - private Methods
     private func setupSearchBar() {
         title = "Search"
@@ -50,7 +60,6 @@ class HomeViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-        
     }
 }
 
@@ -74,6 +83,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.configure(urlImage: urlImage ?? "")
                 
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailSegue", sender: self)
     }
 }
 

@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" id="D2j-Kj-zMg"/>
                     <connections>
                         <outlet property="imageCollectionView" destination="aCb-ay-N2j" id="Eye-Pg-A5j"/>
-                        <segue destination="ahy-Xw-SBo" kind="show" identifier="DetailPush" id="Iar-LQ-QL3"/>
+                        <segue destination="ahy-Xw-SBo" kind="show" identifier="detailSegue" id="AG2-4b-4vd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cV8-qD-gqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
