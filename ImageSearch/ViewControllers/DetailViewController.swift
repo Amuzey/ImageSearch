@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     
     //MARK: - @IBOutlets
     @IBOutlet var detailImageView: UIImageView!
@@ -22,9 +22,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityIndicator.startAnimating()
-        activityIndicator.hidesWhenStopped = true
-        detailImageView.downloadImage(from: images.imageResults[curentIndexPath.item].original, activityIndicator: activityIndicator)
+        updateImage()
     }
     
     //MARK: - Navigation
@@ -33,18 +31,26 @@ class DetailViewController: UIViewController {
         webViewVC.link = self.link
     }
     
+    //MARK: - Private methods
+    private func updateImage() {
+        detailImageView.image = nil
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        detailImageView.downloadImage(from: images.imageResults[curentIndexPath.item].original, activityIndicator: activityIndicator)
+    }
+    
     //MARK: - @IBActions
     @IBAction func prevButtonPress(_ sender: Any) {
         if curentIndexPath.item != 0 {
             curentIndexPath.item -= 1
-            detailImageView.downloadImage(from: images.imageResults[curentIndexPath.item].original, activityIndicator: activityIndicator)
+            updateImage()
         }
     }
     
     @IBAction func nextButtonPress(_ sender: Any) {
         if curentIndexPath.item != images.imageResults.count - 1 {
             curentIndexPath.item += 1
-            detailImageView.downloadImage(from: images.imageResults[curentIndexPath.item].original, activityIndicator: activityIndicator)
+            updateImage()
         }
     }
     

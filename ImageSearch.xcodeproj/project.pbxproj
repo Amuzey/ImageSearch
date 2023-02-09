@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A5943B6299540ED00AF55DB /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ImageSearch.app; path = "/Users/alexey/XcodeProject/ImageSearch/build/Debug-iphoneos/ImageSearch.app"; sourceTree = "<absolute>"; };
+		8A5943BB2995429800AF55DB /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ImageSearch.app; path = "/Users/alexey/XcodeProject/ImageSearch/build/Debug-iphoneos/ImageSearch.app"; sourceTree = "<absolute>"; };
 		8AEBA1F3298FECDD0028A008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AEBA1F5298FECDD0028A008 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8AEBA1F7298FECDD0028A008 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			packageProductDependencies = (
 			);
 			productName = ImageSearch;
-			productReference = 8A5943B6299540ED00AF55DB /* ImageSearch.app */;
+			productReference = 8A5943BB2995429800AF55DB /* ImageSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

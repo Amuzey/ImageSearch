@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController {
+final class WebViewController: UIViewController {
     
     //MARK: - @IBOutlets
     @IBOutlet var imageWebView: WKWebView!
@@ -21,22 +21,25 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadWebView()
+    }
+    
+    //MARK: - Private methods
+    private func loadWebView() {
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         imageWebView.navigationDelegate = self
         guard let link = link else { return }
         let urlRequrst = URLRequest(url: link)
-        imageWebView.load(urlRequrst)
-        
-        
-        
+        DispatchQueue.main.async {
+            self.imageWebView.load(urlRequrst)
+        }
+
     }
 }
 
+//MARK: - WKNavigationDelegate
 extension WebViewController: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        activityIndicator.startAnimating()
-        activityIndicator.hidesWhenStopped = true
-    }
-    
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         activityIndicator.stopAnimating()
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkDataFetcher {
+final class NetworkDataFetcher {
     
    private let networkService = NetworkService()
     

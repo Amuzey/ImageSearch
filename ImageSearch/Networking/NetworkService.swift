@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkService {
+final class NetworkService {
     
     func request(query: String, complition: @escaping ((Result<Data, Error>) -> Void)) {
         
