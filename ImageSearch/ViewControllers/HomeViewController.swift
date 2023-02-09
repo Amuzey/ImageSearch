@@ -10,7 +10,7 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     //MARK: - @IBOutlets
-    @IBOutlet var imageCollectionView: UICollectionView!
+    @IBOutlet private var imageCollectionView: UICollectionView!
     
     //MARK: - Private properties
     private let searchController = UISearchController()
@@ -28,10 +28,10 @@ final class HomeViewController: UIViewController {
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailVC = segue.destination as? DetailViewController else { return }
-        guard let indexPaths = imageCollectionView.indexPathsForSelectedItems else { return }
-        guard let indexPath = indexPaths.first else { return }
-        guard let images = image else { return }
+        guard let detailVC = segue.destination as? DetailViewController,
+              let indexPath = imageCollectionView.indexPathsForSelectedItems?.first,
+              let images = image
+        else { return }
         detailVC.images = images
         detailVC.curentIndexPath = indexPath
     }

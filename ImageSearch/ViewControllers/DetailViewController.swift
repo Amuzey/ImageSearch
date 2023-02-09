@@ -10,12 +10,12 @@ import UIKit
 final class DetailViewController: UIViewController {
     
     //MARK: - @IBOutlets
-    @IBOutlet var detailImageView: UIImageView!
+    @IBOutlet private var detailImageView: UIImageView!
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     //MARK: - Public properties
-    var curentIndexPath = IndexPath()
-    var images = Image(imageResults: [])
+    var curentIndexPath: IndexPath!
+    var images: Image!
     private lazy var link = URL(string: images.imageResults[curentIndexPath.item].link)
     
     //MARK: - Life cycles
@@ -40,21 +40,21 @@ final class DetailViewController: UIViewController {
     }
     
     //MARK: - @IBActions
-    @IBAction func prevButtonPress(_ sender: Any) {
+    @IBAction func prevButtonPress() {
         if curentIndexPath.item != 0 {
             curentIndexPath.item -= 1
             updateImage()
         }
     }
     
-    @IBAction func nextButtonPress(_ sender: Any) {
+    @IBAction func nextButtonPress() {
         if curentIndexPath.item != images.imageResults.count - 1 {
             curentIndexPath.item += 1
             updateImage()
         }
     }
     
-    @IBAction func webViewButtonPress(_ sender: Any) {
+    @IBAction func webViewButtonPress() {
         performSegue(withIdentifier: "webViewSegue", sender: self)
     }
 }

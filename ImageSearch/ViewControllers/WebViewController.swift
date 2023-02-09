@@ -11,8 +11,8 @@ import WebKit
 final class WebViewController: UIViewController {
     
     //MARK: - @IBOutlets
-    @IBOutlet var imageWebView: WKWebView!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private var imageWebView: WKWebView!
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     //MARK: - Pablic properties
     var link = URL(string: "")

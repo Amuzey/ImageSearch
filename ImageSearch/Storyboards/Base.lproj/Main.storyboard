@@ -79,7 +79,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Prev"/>
                                                 <connections>
-                                                    <action selector="prevButtonPress:" destination="ahy-Xw-SBo" eventType="touchUpInside" id="qtG-n4-PgO"/>
+                                                    <action selector="prevButtonPress" destination="ahy-Xw-SBo" eventType="touchUpInside" id="qAr-Ek-Ufz"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH1-e6-ZwJ">
@@ -87,7 +87,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                                 <connections>
-                                                    <action selector="nextButtonPress:" destination="ahy-Xw-SBo" eventType="touchUpInside" id="tGL-Mr-CJA"/>
+                                                    <action selector="nextButtonPress" destination="ahy-Xw-SBo" eventType="touchUpInside" id="W0r-D3-hWz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -97,7 +97,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="WebView"/>
                                         <connections>
-                                            <action selector="webViewButtonPress:" destination="ahy-Xw-SBo" eventType="touchUpInside" id="bmk-nU-Yl1"/>
+                                            <action selector="webViewButtonPress" destination="ahy-Xw-SBo" eventType="touchUpInside" id="gnp-7F-fYd"/>
                                         </connections>
                                     </button>
                                 </subviews>
