@@ -10,6 +10,7 @@ import UIKit
 class ImageCollectionViewCell: UICollectionViewCell {
     
     let imageView = UIImageView()
+    let activityIndicator = UIActivityIndicatorView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,7 +18,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: topAnchor),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -31,7 +33,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(urlImage: String) {
-        imageView.downloadImage(from: urlImage)
+        imageView.downloadImage(from: urlImage, activityIndicator: activityIndicator)
     }
 }
 

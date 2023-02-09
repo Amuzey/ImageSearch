@@ -10,7 +10,7 @@ import UIKit
 var imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
-    func downloadImage(from urlString: String) {
+    func downloadImage(from urlString: String, activityIndicator: UIActivityIndicatorView?) {
         
         if let cachedImage = imageCache.object(forKey: urlString as NSString) {
             self.image = cachedImage
@@ -26,6 +26,7 @@ extension UIImageView {
             DispatchQueue.main.async {
                 self.image = image
                 imageCache.setObject(image, forKey: urlString as NSString)
+                activityIndicator?.stopAnimating()
             }
         }
     }

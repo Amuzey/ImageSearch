@@ -98,19 +98,23 @@
                                         <buttonConfiguration key="configuration" style="gray" title="WebView"/>
                                         <connections>
                                             <action selector="webViewButtonPress:" destination="ahy-Xw-SBo" eventType="touchUpInside" id="bmk-nU-Yl1"/>
-                                            <segue destination="a2e-e3-a3h" kind="show" id="KL7-Gs-J7x"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MPF-lB-eQa">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A9Z-C2-xcE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MPF-lB-eQa" firstAttribute="centerY" secondItem="JlD-wE-hs8" secondAttribute="centerY" id="1jO-uz-DFY"/>
                             <constraint firstItem="fVO-Q7-dbd" firstAttribute="top" secondItem="JlD-wE-hs8" secondAttribute="bottom" constant="20" id="7of-AD-xdz"/>
                             <constraint firstItem="fVO-Q7-dbd" firstAttribute="leading" secondItem="A9Z-C2-xcE" secondAttribute="leading" constant="30" id="Ao8-lr-7be"/>
                             <constraint firstItem="JlD-wE-hs8" firstAttribute="trailing" secondItem="A9Z-C2-xcE" secondAttribute="trailing" id="Bpk-Le-eZz"/>
                             <constraint firstItem="JlD-wE-hs8" firstAttribute="top" secondItem="A9Z-C2-xcE" secondAttribute="top" id="K9l-Ku-o1B"/>
+                            <constraint firstItem="MPF-lB-eQa" firstAttribute="centerX" secondItem="JlD-wE-hs8" secondAttribute="centerX" id="MvK-bp-PXv"/>
                             <constraint firstItem="JlD-wE-hs8" firstAttribute="height" secondItem="bgt-XV-ARA" secondAttribute="height" multiplier="0.63615" id="SW6-L4-avr"/>
                             <constraint firstItem="A9Z-C2-xcE" firstAttribute="bottom" secondItem="fVO-Q7-dbd" secondAttribute="bottom" constant="20" id="TN1-Vg-Fr5"/>
                             <constraint firstItem="JlD-wE-hs8" firstAttribute="leading" secondItem="A9Z-C2-xcE" secondAttribute="leading" id="hwd-J3-vcV"/>
@@ -119,7 +123,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="3V5-Cw-3jH"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="MPF-lB-eQa" id="ofc-aR-ryQ"/>
                         <outlet property="detailImageView" destination="JlD-wE-hs8" id="wTE-XE-TAE"/>
+                        <segue destination="a2e-e3-a3h" kind="show" identifier="webViewSegue" id="lKz-HC-ovR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6j-UN-6v9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -142,21 +148,30 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-va-Y7d">
+                                <rect key="frame" x="186.66666666666666" y="476.66666666666669" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="soh-LN-z1o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MGg-va-Y7d" firstAttribute="centerY" secondItem="dsp-q3-IyW" secondAttribute="centerY" id="Mzu-0a-oBG"/>
                             <constraint firstItem="dsp-q3-IyW" firstAttribute="bottom" secondItem="soh-LN-z1o" secondAttribute="bottom" id="Q50-hn-62M"/>
                             <constraint firstItem="dsp-q3-IyW" firstAttribute="trailing" secondItem="soh-LN-z1o" secondAttribute="trailing" id="Snz-2k-Jxy"/>
                             <constraint firstItem="dsp-q3-IyW" firstAttribute="top" secondItem="soh-LN-z1o" secondAttribute="top" id="XUc-cl-A0V"/>
                             <constraint firstItem="dsp-q3-IyW" firstAttribute="leading" secondItem="soh-LN-z1o" secondAttribute="leading" id="v8Q-9a-3kP"/>
+                            <constraint firstItem="MGg-va-Y7d" firstAttribute="centerX" secondItem="dsp-q3-IyW" secondAttribute="centerX" id="wN6-xR-nWW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NNI-aq-osV"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="MGg-va-Y7d" id="3Uv-ZS-ItK"/>
+                        <outlet property="imageWebView" destination="dsp-q3-IyW" id="B7Q-x4-Qp8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6h-Wt-Xhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3603.8167938931297" y="52.816901408450704"/>
+            <point key="canvasLocation" x="3628" y="53"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rjq-vo-0OE">

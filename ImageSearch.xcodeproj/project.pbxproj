@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8AEBA1F0298FECDD0028A008 /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AEBA1F0298FECDD0028A008 /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ImageSearch.app; path = "/Users/alexey/XcodeProject/ImageSearch/build/Debug-iphoneos/ImageSearch.app"; sourceTree = "<absolute>"; };
 		8AEBA1F3298FECDD0028A008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AEBA1F5298FECDD0028A008 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8AEBA1F7298FECDD0028A008 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -55,16 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				8AEBA1F2298FECDD0028A008 /* ImageSearch */,
-				8AEBA1F1298FECDD0028A008 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		8AEBA1F1298FECDD0028A008 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8AEBA1F0298FECDD0028A008 /* ImageSearch.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8AEBA1F2298FECDD0028A008 /* ImageSearch */ = {
@@ -168,6 +159,8 @@
 			dependencies = (
 			);
 			name = ImageSearch;
+			packageProductDependencies = (
+			);
 			productName = ImageSearch;
 			productReference = 8AEBA1F0298FECDD0028A008 /* ImageSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -196,7 +189,10 @@
 				Base,
 			);
 			mainGroup = 8AEBA1E7298FECDD0028A008;
-			productRefGroup = 8AEBA1F1298FECDD0028A008 /* Products */;
+			packageReferences = (
+				8AEBA223299527F90028A008 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */,
+			);
+			productRefGroup = 8AEBA1E7298FECDD0028A008;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -456,6 +452,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8AEBA223299527F90028A008 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chiahsien/CHTCollectionViewWaterfallLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 8AEBA1E8298FECDD0028A008 /* Project object */;
 }

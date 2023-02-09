@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     //MARK: - @IBOutlets
     @IBOutlet var imageCollectionView: UICollectionView!
     
-    //MARK: - private Properties
+    //MARK: - Private properties
     private let searchController = UISearchController()
     private var networkManager = NetworkDataFetcher()
     private var image: Image? = nil
@@ -31,12 +31,13 @@ class HomeViewController: UIViewController {
         guard let detailVC = segue.destination as? DetailViewController else { return }
         guard let indexPaths = imageCollectionView.indexPathsForSelectedItems else { return }
         guard let indexPath = indexPaths.first else { return }
-        detailVC.image = image
+        guard let images = image else { return }
+        detailVC.images = images
         detailVC.curentIndexPath = indexPath
     }
     
     
-    //MARK: - private Methods
+    //MARK: - Private methods
     private func setupSearchBar() {
         title = "Search"
         navigationItem.searchController = searchController
@@ -81,7 +82,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell() }
         let urlImage = image?.imageResults[indexPath.item].thumbnail
         cell.configure(urlImage: urlImage ?? "")
-                
         return cell
     }
     
@@ -105,11 +105,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        30
+        return 30
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        10
+        return 10
     }
 }
 
