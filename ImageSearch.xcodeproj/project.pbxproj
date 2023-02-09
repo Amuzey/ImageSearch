@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8AEBA1F0298FECDD0028A008 /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ImageSearch.app; path = "/Users/alexey/XcodeProject/ImageSearch/build/Debug-iphoneos/ImageSearch.app"; sourceTree = "<absolute>"; };
+		8A5943B6299540ED00AF55DB /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ImageSearch.app; path = "/Users/alexey/XcodeProject/ImageSearch/build/Debug-iphoneos/ImageSearch.app"; sourceTree = "<absolute>"; };
 		8AEBA1F3298FECDD0028A008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AEBA1F5298FECDD0028A008 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8AEBA1F7298FECDD0028A008 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -39,16 +39,6 @@
 		8AEBA21C2993F2750028A008 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		8AEBA2212993FB120028A008 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		8AEBA1ED298FECDD0028A008 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8AEBA1E7298FECDD0028A008 = {
@@ -151,7 +141,6 @@
 			buildConfigurationList = 8AEBA204298FECDF0028A008 /* Build configuration list for PBXNativeTarget "ImageSearch" */;
 			buildPhases = (
 				8AEBA1EC298FECDD0028A008 /* Sources */,
-				8AEBA1ED298FECDD0028A008 /* Frameworks */,
 				8AEBA1EE298FECDD0028A008 /* Resources */,
 			);
 			buildRules = (
@@ -162,7 +151,7 @@
 			packageProductDependencies = (
 			);
 			productName = ImageSearch;
-			productReference = 8AEBA1F0298FECDD0028A008 /* ImageSearch.app */;
+			productReference = 8A5943B6299540ED00AF55DB /* ImageSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +179,6 @@
 			);
 			mainGroup = 8AEBA1E7298FECDD0028A008;
 			packageReferences = (
-				8AEBA223299527F90028A008 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */,
 			);
 			productRefGroup = 8AEBA1E7298FECDD0028A008;
 			projectDirPath = "";
@@ -452,17 +440,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8AEBA223299527F90028A008 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/chiahsien/CHTCollectionViewWaterfallLayout";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.9;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 8AEBA1E8298FECDD0028A008 /* Project object */;
 }
