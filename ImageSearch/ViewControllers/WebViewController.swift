@@ -34,7 +34,7 @@ final class WebViewController: UIViewController {
         DispatchQueue.main.async {
             self.imageWebView.load(urlRequrst)
         }
-
+        
     }
 }
 

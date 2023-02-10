@@ -9,7 +9,7 @@ import Foundation
 
 final class NetworkDataFetcher {
     
-   private let networkService = NetworkService()
+    private let networkService = NetworkService()
     
     func fetchImage(query: String, response: @escaping (Result<Image, Error>) -> Void) {
         networkService.request(query: query) { result in
@@ -25,7 +25,7 @@ final class NetworkDataFetcher {
                 }
             case .failure(let error):
                 print("Error received requesting data: \(error.localizedDescription)")
-                             response(.failure(error))
+                response(.failure(error))
             }
         }
     }
